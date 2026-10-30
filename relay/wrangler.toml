@@ -1,0 +1,8 @@
+# Cloudflare Worker for one-click approval links. Deploy: npm run relay:deploy
+# Secrets (set once each with: npx wrangler secret put NAME --config relay/wrangler.toml):
+#   APPROVAL_LINK_SECRET     same value as in .env
+#   TRIGGER_DEV_SECRET_KEY   tr_dev_... (for local testing)
+#   TRIGGER_PROD_SECRET_KEY  tr_prod_... (after deploying the tasks)
+name = "onboarding-approvals"
+main = "worker.ts"
+compatibility_date = "2026-10-01"
